@@ -1,17 +1,17 @@
 /** @type {import('jest').Config} */
 const config = {
   roots: [
-    ['<rootDir>/src']
+    '<rootDir>/src'
   ],
+
   clearMocks: true,
-  collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
   coverageDirectory: 'coverage',
+  coverageProvider: 'v8',
+  collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
   testEnvironment: 'node',
   transform: {
     '.+\\.ts$': 'ts-jest'
-  },
-  coverageProvider: 'v8'
+  }
 }
 
 module.exports = config
